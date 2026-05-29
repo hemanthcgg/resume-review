@@ -1,8 +1,17 @@
 import express from "express";
+import connectDB from "./config/db";
+import userRouter from "./routes/user.route";
+import authRouter from "./routes/auth.route";
+
+// Connect to MongoDB
+connectDB();
+
+const PORT = process.env.PORT || 3000;
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 app.use(express.json());
+app.use(authRouter);
+app.use(userRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello, world..!!");

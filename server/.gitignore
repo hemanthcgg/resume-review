@@ -1,6 +1,6 @@
 # Ignore node modules and build artifacts
-node_modules/*
-dist/*
+node_modules
+dist
 
 # Ignore environment variables and lock files
 .env
