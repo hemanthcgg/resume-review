@@ -1,0 +1,41 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(228, 233, 247);
+    text-align: center;
+
+    &__info {
+        padding: 2rem;
+    }
+
+    &__info-content {
+        margin-bottom: 2rem;
+    }
+
+    &__icon {
+        width: 4.18rem;
+        height: auto;
+        margin: 0 0 1rem 0;
+        object-fit: contain;
+        border-radius: 1rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
+        margin: 0;
+        letter-spacing: -0.5px;
+    }
+
+    &__description {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+
+}
