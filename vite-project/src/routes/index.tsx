@@ -1,16 +1,16 @@
 import React from 'react';
 import { useRoutes, Navigate } from 'react-router-dom';
-import { Login } from '../pages/Login';
+import { HomePage } from '../pages/home-page/HomePage';
 
 const routeConfig = [
   {
     path: '/',
-    element: <Login />
+    element: <HomePage />
   },
-  {
-    path: '/login',
-    element: <Login />
-  },
+  // {
+  //   path: '/login',
+  //   element: <Login />
+  // },
   {
     path: '*',
     element: <Navigate to="/" replace />
