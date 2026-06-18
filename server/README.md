@@ -50,3 +50,11 @@ https://www.figma.com/make/S1Ozsa7Jv76Jg0zgv0Pagr/Job-Matching-Application-Desig
 ```
 
 ---
+
+## Todos
+- jwt validation (auth complete)
+- 3rd part jobs api
+- resume pdf data exctration and storing
+- ai model api call
+- schema validation, logging middlewars
+- ci/cd and deployment
