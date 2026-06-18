@@ -81,6 +81,7 @@
 
       &:hover {
         background-color: #7a7c7e;
+        color: #fff;
       }
     }
   }
@@ -103,20 +104,26 @@
       align-items: flex-start;
       label {
         font-size: 0.9rem;
-        font-weight: 500;
+        font-weight: bold;
         color: #364153;
         margin-bottom: 0.25rem;
+        line-height: 1.4;
       }
       input {
         width: 19rem;
         padding: 0.5rem;
-        border: 1px solid;
+        border: 2px solid;
         border-radius: 0.5rem;
         font-size: 1rem;
         border-color: #d1d5dc;
 
+        &::placeholder {
+          line-height: 1.5;
+          font-weight: 400;
+        }
+
         &:focus {
-          border-color: #4f39f6;
+          border: 2px solid #4f39f6;
           outline: none;
         }
       }
