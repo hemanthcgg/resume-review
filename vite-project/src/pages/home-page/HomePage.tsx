@@ -1,63 +1,10 @@
 import React, { useState } from "react";
 import resumeIcon from "../../assets/hiring.png";
 import "./HomePage.scss";
-
-//Login form
-const LoginForm = () => (
-  <div className="form-container">
-    <form className="login-form">
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <br />
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="password">Password</label>
-        <br />
-        <input type="password" id="password" name="password" required />
-      </div>
-      <button type="submit" className="submit-btn btn--primary">
-        Login
-      </button>
-    </form>
-  </div>
-);
-
-//Sign up form
-const SignUpForm = () => (
-  <div className="form-container">
-    <form className="signup-form">
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <br />
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <br />
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="password">Password</label>
-        <br />
-        <input type="password" id="password" name="password" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="jobTitle">Job Title</label>
-        <br />
-        <input type="text" id="jobTitle" name="jobTitle" />
-      </div>
-      <div className="form-group">
-        <label htmlFor="description">Description</label>
-        <br />
-        <textarea id="description" name="description" />
-      </div>
-      <button type="submit" className="submit-btn btn--primary">
-        Sign Up
-      </button>
-    </form>
-  </div>
-);
+import LoginForm from "./LoginForm";
+import SignUpForm from "./SignupForm";
+import LoginIcon from "@mui/icons-material/Login";
+import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
 
 export const HomePage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
@@ -82,18 +29,18 @@ export const HomePage: React.FC = () => {
                 className={`btn ${activeTab === "login" ? "btn--active" : ""}`}
                 onClick={() => setActiveTab("login")}
               >
+                <LoginIcon fontSize="small" />
                 Login
               </button>
               <button
                 className={`btn ${activeTab === "signup" ? "btn--active" : ""}`}
                 onClick={() => setActiveTab("signup")}
               >
+                <PersonAddAltOutlinedIcon fontSize="small" />
                 Sign Up
               </button>
             </div>
-            <div className="home-page__login-form-section">
-              {activeTab === "login" ? <LoginForm /> : <SignUpForm />}
-            </div>
+            {activeTab === "login" ? <LoginForm /> : <SignUpForm />}
           </div>
         </div>
       </div>
